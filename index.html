@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
 
     <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/icons/style.css">
+    <link rel="stylesheet" href="libs/animatecss/animate.css">
+    <link rel="stylesheet" href="libs/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="libs/bxslider/jquery.bxslider.min.css">
 
 
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body data-spy="scroll" data-target="#bs-example" data-offset="100">
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top navb" >
+        <nav class="navbar navbar-default navbar-fixed-top navb" id="bs-example">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="navbar-header navleft">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ham-bs-example" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -29,70 +35,1084 @@
                         </div>
                     </div>
                     <div class="col-sm-9">
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav pull-right ulhead">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Skills</a></li>
-                                <li><a href="#">Service</a></li>
-                                <li><a href="#">Work</a></li>
-                                <li><a href="#">Testemonials</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        <div class="collapse navbar-collapse" id="ham-bs-example">
+                            <ul class="nav navbar-nav pull-right ulhead" role="tablist">
+                                <li class="active"><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#service">Service</a></li>
+                                <li><a href="#work">Work</a></li>
+                                <li><a href="#testemonials">Testemonials</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li class="activebtn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div>
                 </div>
             </div>
         </nav>
+        <div class="navbar-fixed-top searchhead">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 pull-right">
+                        <div class="input-group input-group-lg searchgr">
+                            <input type="text" class="form-control" placeholder="Type and search...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div><
+            </div>
+        </div>
     </header>
     <main>
-        <section class="first">
-            <div class="container-fluid mainphoto shadow">
-                <div class="photomain">
-                    <img src="img/headphoto.png" alt="headphoto">
+        <section class="first" id="home">
+            <div class="mainphoto">
+                <div class="carouselham owl-carousel owl-theme">
+                    <div class="slider" style="background-image: url('img/1.jpg')">1</div>
+                    <div class="slider" style="background-image: url('img/2.jpg')">2</div>
+                    <div class="slider" style="background-image: url('img/0.jpg')">3</div>
+                </div>
+                <div class="maintext">
+                    <h2>The Ham is <span>Wordpress theme</span></h2> <br>
+                    <h1>We are creative</h1>
+                    <p>Just Buy And Enjoy These Awesome Features</p>
+                    <div class="photobtn">
+                        <button type="button" class="btn btn-success">Explore now</button>
+                        <button type="button" class="btn btn-info">Purchase now</button>
+                    </div>
                 </div>
             </div>
-            <div class="shadow"></div>
-            <div class="centertext">
-                <h2>The Ham is <span>Wordpress theme</span></h2> <br>
-                <h1>We are creative</h1>
-                <p>Just Buy And Enjoy These Awesome Features</p>
-                <div class="photobtn">
-                    <button type="button" class="btn btn-success">Explore now</button>
-                    <button type="button" class="btn btn-info">Purchase now</button>
-                </div>
-            </div>
-
         </section>
-        <!--<section class="second">-->
-            <!--<div class="container-fluid secondmenu">-->
-                <!--<div class="row">-->
-                    <!--<div class="col-sm-3">-->
-                        <!--<h4>Different theme option</h4>-->
-                    <!--</div>-->
-                    <!--<div class="col-sm-3">-->
-                        <!--<h4>fully customizable</h4>-->
-                    <!--</div>-->
-                    <!--<div class="col-sm-3">-->
-                        <!--<h4>unlimited support</h4>-->
-                    <!--</div>-->
-                    <!--<div class="col-sm-3">-->
-                        <!--<h4>responsive all device</h4>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</section>-->
+        <section class="second">
+            <div class="container-fluid secondmenu">
+                <div class="row">
+                    <div class="col-sm-3 menurow">
+                        <div class="ico"><i class="icon-pointer"></i></div>
+                        <h4>Different theme option</h4>
+                    </div>
+                    <div class="col-sm-3 menurow">
+                        <div class="ico"><i class="icon-diamant"></i></div>
+                        <h4>fully customizable</h4>
+                    </div>
+                    <div class="col-sm-3 menurow">
+                        <div class="ico"><i class="icon-lamp"></i> </div>
+                        <h4>unlimited support</h4>
+                    </div>
+                    <div class="col-sm-3 menurow">
+                        <div class="ico"><i class="icon-devices"></i> </div>
+                        <h4>responsive all device</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="third">
+            <div class="container">
+                <h2>Creative Amazing Features</h2>
+                <div class="hr"><hr></div>
+                <div class="hr"><hr></div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature1"></i>Retina Ready</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature2"></i>Creative Blog Style</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature3"></i>Icon Fonts</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature4"></i>Parallax Effects</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature5"></i>Amazing Interface</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature6"></i>SEO Optimized</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature7"></i>Creative Solutions</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature8"></i>Mega Menus</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="caption">
+                            <h3><i class="icon-feature9"></i>Custom Backgrounds</h3>
+                            <p>All our modules are built with the possi bility to thse choose between different design and you change. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="four" id="about">
+            <div class="bg" style="background-image: url('img/3.jpg')">
+                <div class="imgbg" style="background-image: url('img/5.png')"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-6 tabs">
+                            <div class="headhr">
+                                <h2>About Our Company</h2>
+                                <div class="hr"><hr></div>
+                                <div class="hr"><hr></div>
+                            </div>
+                            <ul class="tabs">
+                                <li class="tab-link current" data-tab="tab-1">our History</li>
+                                <li class="tab-link" data-tab="tab-2">our Biography</li>
+                                <li class="tab-link" data-tab="tab-3">our Skills</li>
+                            </ul>
+
+                            <div id="tab-1" class="tab-content current">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua.
+                                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <div class="row tabrow">
+                                    <div class="col-sm-6 col-xs-6">
+                                        <p><i class="icon-ok"></i>Excepteur sint occaecat sint.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <p><i class="icon-ok"></i>Excepteur sint occaecat sint.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <p><i class="icon-ok"></i>Excepteur sint occaecat sint.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <p><i class="icon-ok"></i>Excepteur sint occaecat sint.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <p><i class="icon-ok"></i>Excepteur sint occaecat sint.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <p><i class="icon-ok"></i>Excepteur sint occaecat sint.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <p><i class="icon-ok"></i>Excepteur sint occaecat sint.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <p><i class="icon-ok"></i>Excepteur sint occaecat sint.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="tab-2" class="tab-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum Suspendisse cursus malesuada facilisis. Nunc con sectetur odio sed dolor tincidunt porttitor.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu lum nec odio ipsum. Sus pendisse cursus malesua da facilisis. Vestibulum nec odio ipsum. </p>
+                                <br>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum Suspendisse cursus malesuada facilisis. Nunc con sectetur odio sed dolor </p>
+                            </div>
+                            <div id="tab-3" class="tab-content">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%">
+                                        <span>User Interface</span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                        <span>Web Designe</span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%">
+                                        <span>Wordpress</span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                        <span>HTML & CSS</span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                        <span>App Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="five" id="work">
+            <h2>Our Amazing Work</h2>
+            <div class="hr"><hr></div>
+            <div class="hr"><hr></div>
+            <div class="controls">
+                <button class="filter" data-mixitup-control data-filter="all">All</button>
+                <button class="filter" data-mixitup-control data-filter=".category-1">Graphic Design</button>
+                <button class="filter" data-mixitup-control data-filter=".category-2">Web Design</button>
+                <button class="filter" data-mixitup-control data-filter=".category-3">Landing Pages</button>
+                <button class="filter" data-mixitup-control data-filter=".category-4">Wordpress</button>
+            </div>
+            <div class="container">
+                <div class="container-mix clearfix">
+                    <div class="mix category-1 ">
+                        <div class="mixbg" style="background-image: url('img/s1.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-2">
+                        <div class="mixbg" style="background-image: url('img/s2.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-3">
+                        <div class="mixbg" style="background-image: url('img/s3.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-4">
+                        <div class="mixbg" style="background-image: url('img/s4.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-3">
+                        <div class="mixbg" style="background-image: url('img/s3.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-4">
+                        <div class="mixbg" style="background-image: url('img/s4.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-2">
+                        <div class="mixbg" style="background-image: url('img/s2.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-1">
+                        <div class="mixbg" style="background-image: url('img/s1.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-2">
+                        <div class="mixbg" style="background-image: url('img/s2.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-1">
+                        <div class="mixbg" style="background-image: url('img/s1.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-4">
+                        <div class="mixbg" style="background-image: url('img/s4.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix category-3">
+                        <div class="mixbg" style="background-image: url('img/s3.jpg')" data-myorder="1"></div>
+                        <div class="hovermix">
+                            <div class="centermix">
+                                <div class="iconsmix">
+                                    <div class="icolincs"><a href="#"><i class="icon-work-link"></i></a></div>
+                                    <div class="icolincs"><a href="#"><i class="icon-feature3"></i></a></div>
+                                </div>
+                                <h4>Creative Design</h4>
+                                <h5>Web Design</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="btnload">
+                        <button type="button" class="btn btn-success"><i class="icon-plus"></i>Load More</button>
+                    </div>
+            </div>
+        </section>
+        <section class="six" id="service">
+            <h2>Our Services</h2>
+            <div class="hr"><hr></div>
+            <div class="hr"><hr></div>
+
+            <div class="container">
+                        <ul class="tabes">
+                            <li class="tabs-link currents" data-tab="tabs-1">Web Design <div class="triangle"></div></li>
+                            <li class="tabs-link" data-tab="tabs-2">Graphic Design<div class="triangle"></div></li>
+                            <li class="tabs-link" data-tab="tabs-3">Online Support<div class="triangle"></div></li>
+                            <li class="tabs-link" data-tab="tabs-4">App Design<div class="triangle"></div></li>
+                            <li class="tabs-link" data-tab="tabs-5">Online Marketing<div class="triangle"></div></li>
+                            <li class="tabs-link" data-tab="tabs-6">Seo Service<div class="triangle"></div></li>
+                        </ul>
+
+                        <div id="tabs-1" class="tab-contents currents clearfix">
+                            <img src="img/p1.jpg" alt="image">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div id="tabs-2" class="tab-contents clearfix">
+                            <img src="img/p2.jpg" alt="image">
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div id="tabs-3" class="tab-contents clearfix">
+                            <img src="img/p3.jpg" alt="image">
+                            <p>Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div id="tabs-4" class="tab-contents clearfix">
+                            <img src="img/p4.jpg" alt="image">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div id="tabs-5" class="tab-contents clearfix">
+                            <img src="img/p5.jpg" alt="image">
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div id="tabs-6" class="tab-contents clearfix">
+                            <img src="img/p6.jpg" alt="image clearfix">
+                            <p>Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+            </div>
+        </section>
+        <section class="seven">
+            <div class="bgseven" style="background-image: url('img/4.jpg')"></div>
+            <div class="container center">
+                <h2>Everything is ready. just buy and install now</h2>
+                <p>Smooth reliable, responsive ready, perfect portfolio, unique blog layout and many many options for you</p>
+                <div class="photobtn">
+                    <button type="button" class="btn btn-success">Purchase now</button>
+                </div>
+            </div>
+        </section>
+        <section class="eight" id="blog">
+            <div class="container">
+                <h2>Breaking news</h2>
+                <div class="hr"><hr></div>
+                <div class="hr"><hr></div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/d1.jpg')"></div>
+                            </div>
+                            <div class="righttxt pull-right">
+                                <div>12</div>
+                                <div>Feb</div>
+                            </div>
+                            <div class="bottomtxt">
+                                <h5>Amazing Blog Post</h5>
+                                <span>By admin</span>
+                                <span>2 comment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/d1.jpg')"></div>
+                            </div>
+                            <div class="righttxt pull-right">
+                                <div>12</div>
+                                <div>Feb</div>
+                            </div>
+                            <div class="bottomtxt">
+                                <h5>Amazing Blog Post</h5>
+                                <span>By admin</span>
+                                <span>2 comment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/d1.jpg')"></div>
+                            </div>
+                            <div class="righttxt pull-right">
+                                <div>12</div>
+                                <div>Feb</div>
+                            </div>
+                            <div class="bottomtxt">
+                                <h5>Amazing Blog Post</h5>
+                                <span>By admin</span>
+                                <span>2 comment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/d1.jpg')"></div>
+                            </div>
+                            <div class="righttxt pull-right">
+                                <div>12</div>
+                                <div>Feb</div>
+                            </div>
+                            <div class="bottomtxt">
+                                <h5>Amazing Blog Post</h5>
+                                <span>By admin</span>
+                                <span>2 comment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/d1.jpg')"></div>
+                            </div>
+                            <div class="righttxt pull-right">
+                                <div>12</div>
+                                <div>Feb</div>
+                            </div>
+                            <div class="bottomtxt">
+                                <h5>Amazing Blog Post</h5>
+                                <span>By admin</span>
+                                <span>2 comment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/d1.jpg')"></div>
+                            </div>
+                            <div class="righttxt pull-right">
+                                <div>12</div>
+                                <div>Feb</div>
+                            </div>
+                            <div class="bottomtxt">
+                                <h5>Amazing Blog Post</h5>
+                                <span>By admin</span>
+                                <span>2 comment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/d1.jpg')"></div>
+                            </div>
+                            <div class="righttxt pull-right">
+                                <div>12</div>
+                                <div>Feb</div>
+                            </div>
+                            <div class="bottomtxt">
+                                <h5>Amazing Blog Post</h5>
+                                <span>By admin</span>
+                                <span>2 comment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/d1.jpg')"></div>
+                            </div>
+                            <div class="righttxt pull-right">
+                                <div>12</div>
+                                <div>Feb</div>
+                            </div>
+                            <div class="bottomtxt">
+                                <h5>Amazing Blog Post</h5>
+                                <span>By admin</span>
+                                <span>2 comment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="nine">
+            <div class="container-fluid secondmenu">
+                <div class="row">
+                    <div class="col-sm-3 menurow">
+                        <div class="circleico circleico2">
+                            <div class="icons icons2">
+                                <div class="icon"><i class="icon-work"></i></div>
+                            </div>
+                        </div>
+                        <h4>4609</h4>
+                        <p>Works</p>
+                    </div>
+                    <div class="col-sm-3 menurow">
+                        <div class="circleico">
+                            <div class="icons">
+                                <div class="icon"><i class="icon-user"></i></div>
+                            </div>
+                        </div>
+                        <h4>3470</h4>
+                        <p>Customers</p>
+                    </div>
+                    <div class="col-sm-3 menurow">
+                        <div class="circleico circleico2">
+                            <div class="icons icons2">
+                                <div class="icon"> <i class="icon-cart"></i></div>
+                            </div>
+                        </div>
+                        <h4>2908</h4>
+                        <p>Purchase</p>
+                    </div>
+                    <div class="col-sm-3 menurow">
+                        <div class="circleico">
+                            <div class="icons">
+                                <div class="icon"><i class="icon-location"></i></div>
+                            </div>
+                        </div>
+                        <h4>1908</h4>
+                        <p>Office</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ten" id="skills">
+            <div class="container">
+                <h2>Our Pricing Table</h2>
+                <div class="hr"><hr></div>
+                <div class="hr"><hr></div>
+                <div class="row rowlist">
+                    <div class="col-sm-3 cols">
+                        <ul class="ullist">
+                            <li>Personal</li>
+                            <li><span>$99</span>/Month</li>
+                            <li>1 Hosting</li>
+                            <li>2 Email Marketing</li>
+                            <li>5 Database</li>
+                            <li>2 Design Pack</li>
+                            <li>3 Website Layouts</li>
+                            <li>5 Header Style</li>
+                            <li>3 Online Store</li>
+                            <li><button class="btn btn-default" type="submit">Buy Now</button></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 cols">
+                        <ul class="ullist">
+                            <li>Business</li>
+                            <li><span>$199</span>/Month</li>
+                            <li>1 Hosting</li>
+                            <li>2 Email Marketing</li>
+                            <li>5 Database</li>
+                            <li>2 Design Pack</li>
+                            <li>3 Website Layouts</li>
+                            <li>5 Header Style</li>
+                            <li>3 Online Store</li>
+                            <li><button class="btn btn-default" type="submit">Buy Now</button></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 cols">
+                        <ul class="ullist ulthird">
+                            <li>Proffesional
+                                <div class="offer">offer</div>
+                            </li>
+                            <li><span>$299</span>/Month</li>
+                            <li>1 Hosting</li>
+                            <li>2 Email Marketing</li>
+                            <li>5 Database</li>
+                            <li>2 Design Pack</li>
+                            <li>3 Website Layouts</li>
+                            <li>5 Header Style</li>
+                            <li>3 Online Store</li>
+                            <li><button class="btn btn-default" type="submit">Buy Now</button></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 cols">
+                        <ul class="ullist ullast">
+                            <li>Diamond</li>
+                            <li><span>$299</span>/Month</li>
+                            <li>1 Hosting</li>
+                            <li>2 Email Marketing</li>
+                            <li>5 Database</li>
+                            <li>2 Design Pack</li>
+                            <li>3 Website Layouts</li>
+                            <li>5 Header Style</li>
+                            <li>3 Online Store</li>
+                            <li><button class="btn btn-default" type="submit">Buy Now</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="eleven" id="testemonials">
+            <div class="bgeleven" style="background-image: url('img/6.jpg')">
+                <div class="container">
+                    <div class="headtext">
+                        <h2>What People Say About theHam</h2>
+                        <div class="hr"><hr></div>
+                        <div class="hr"><hr></div>
+                    </div>
+                    <ul class="bxslider">
+                        <li class="slide1">
+                            <div class="carouselicon">
+                                <i class="icon-quote"></i>
+                            </div>
+                            <p>Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
+                                Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis.</p>
+                            <h4>Hasan Ali</h4>
+                            <p>UX Designer</p>
+                            <div class="slideimg">
+                                <img src="img/sl1.jpg" alt="photo"/>
+                            </div>
+                        </li>
+                        <li class="slide1">
+                            <div class="carouselicon">
+                                <i class="icon-quote"></i>
+                            </div>
+                            <p>Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
+                                Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis.</p>
+                            <h4>Hasan Ali</h4>
+                            <p>UX Designer</p>
+                            <div class="slideimg">
+                                <img src="img/sl2.jpg" alt="photo"/>
+                            </div>
+                        </li>
+                        <li class="slide1">
+                            <div class="carouselicon">
+                                <i class="icon-quote"></i>
+                            </div>
+                            <p>Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
+                                Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis.</p>
+                            <h4>Hasan Ali</h4>
+                            <p>UX Designer</p>
+                            <div class="slideimg">
+                                <img src="img/sl3.jpg" alt="photo"/>
+                            </div>
+                        </li>
+                        <li class="slide1">
+                            <div class="carouselicon">
+                                <i class="icon-quote"></i>
+                            </div>
+                            <p>Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
+                                Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis.</p>
+                            <h4>Hasan Ali</h4>
+                            <p>UX Designer</p>
+                            <div class="slideimg">
+                                <img src="img/sl4.jpg" alt="photo"/>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="bxdown" id="bx-pager">
+                        <a data-slide-index="0" href=""><img src="img/sl1.jpg" alt="photo" /></a>
+                        <a data-slide-index="1" href=""><img src="img/sl2.jpg" alt="photo" /></a>
+                        <a data-slide-index="2" href=""><img src="img/sl3.jpg" alt="photo" /></a>
+                        <a data-slide-index="3" href=""><img src="img/sl4.jpg" alt="photo" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="twelve" id="team">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <div class="hr"><hr></div>
+                <div class="hr"><hr></div>
+                <div class="row classrow">
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/m1.jpg')">
+                                    <div class="circlefon">
+                                        <div class="circleico">
+                                            <div class="icons">
+                                                <div class="icon"><i class="icon-plus"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomtxt">
+                                <div class="team">
+                                    <h5>Al Masum</h5>
+                                    <p>Founder</p>
+                                </div>
+                                <div class="socicons">
+                                    <div class="iconsbtn fff"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-skype" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-vimeo" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/m2.jpg')">
+                                    <div class="circlefon">
+                                        <div class="circleico">
+                                            <div class="icons">
+                                                <div class="icon"><i class="icon-plus"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomtxt">
+                                <div class="team">
+                                    <h5>Mis Liza</h5>
+                                    <p>UX Designer</p>
+                                </div>
+                                <div class="socicons">
+                                    <div class="iconsbtn fff"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-skype" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-vimeo" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/m1.jpg')">
+                                    <div class="circlefon">
+                                        <div class="circleico">
+                                            <div class="icons">
+                                                <div class="icon"><i class="icon-plus"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bottomtxt">
+                                <div class="team">
+                                    <h5>Hasan Mahmud</h5>
+                                    <p>Web Designer</p>
+                                </div>
+                                <div class="socicons">
+                                    <div class="iconsbtn fff"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-skype" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-vimeo" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="mainrow">
+                            <div class=" colimg">
+                                <div class="imgnw" style="background-image: url('img/m2.jpg')">
+                                    <div class="circlefon">
+                                        <div class="circleico">
+                                            <div class="icons">
+                                                <div class="icon"><i class="icon-plus"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomtxt">
+                                <div class="team">
+                                    <h5>Afifa Jannat</h5>
+                                    <p>Web Designer</p>
+                                </div>
+                                <div class="socicons">
+                                    <div class="iconsbtn fff"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-skype" aria-hidden="true"></i></div>
+                                    <div class="iconsbtn"><i class="fa fa-vimeo" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="thirteen">
+            <div class="bg" style="background-image: url('img/7.jpg')">
+                <div class="imgbg" style="background-image: url('img/6.png')"></div>
+                <div class="container">
+                    <h2>theham is not only wordpress theme</h2>
+                    <h3>it’s also clean and creative design</h3>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-6">
+                            <ul class="listgr">
+                                <li><i class="icon-ok"></i>Clean Layout Design</li>
+                                <li><i class="icon-ok"></i>Many Style Portfolio Design</li>
+                                <li><i class="icon-ok"></i>Beautiful Blog Page</li>
+                                <li><i class="icon-ok"></i>Mega PSD Pack</li>
+                                <li><i class="icon-ok"></i>User Friendly Design</li>
+                                <li><i class="icon-ok"></i>Full Shortcodes</li>
+                                <li><i class="icon-ok"></i>Fully Editable PSD</li>
+                            </ul>
+                            <div class="photobtn">
+                                <button type="button" class="btn btn-success">Purchase now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        <section class="fourteen" id="contact">
+            <div class="container-fluid">
+                <div class="row padd">
+                    <div class="col-sm-6 mapp">
+                        <div id="map" style="width:100%; height:550px"></div>
+                    </div>
+                    <div class="col-sm-6 sectionform">
+                        <div class="headerform">
+                            <h2>Keep In Touch</h2>
+                            <div class="hr"><hr></div>
+                            <div class="hr"><hr></div>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="9" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-default" type="submit">send request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
-
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#"><h2>the<span>Ham</span></h2></a>
+                    <p>Lorem ipsum dolor sit amet, con is sectetur adipiscing elit. Duis ut lob ortis nulla.
+                        Vestibulum ante ipsum primis itrices posuere cubilia</p>
+                    <br><br><br>
+                    <p><span>Office:</span></p>
+                    <p>795 Folsom Ave, Suite 600<p>
+                    <p>San Francisco, CA 94107</p>
+                    <br>
+                    <p><span>Phone: </span>(91) 8547 632521</p>
+                    <p><span>Fax: </span>(91) 11 4752 1433</p>
+                    <p><span>Email: </span>info@canvas.com </p>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h3>recent post</h3>
+                    <div class="media">
+                        <div class="media-left media-top">
+                            <a href="#">
+                                <img class="media-object" src="img/sl1.jpg" alt="photo">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Middle aligned media</h4>
+                            <p>Lorem ipsum dolor sit amet, con   sectetur adip is lisicing elit, sed do.</p>
+                            <time>10 March, 2015</time>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="media">
+                        <div class="media-left media-top">
+                            <a href="#">
+                                <img class="media-object" src="img/sl1.jpg" alt="photo" >
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">multi author POST</h4>
+                            <p>Lorem ipsum dolor sit amet, con   sectetur adip is lisicing elit, sed do.</p>
+                            <time>10 March, 2015</time>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="media">
+                        <div class="media-left media-top">
+                            <a href="#">
+                                <img class="media-object" src="img/sl1.jpg" alt="photo" >
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">multi author POST</h4>
+                            <p>Lorem ipsum dolor sit amet, con   sectetur adip is lisicing elit, sed do.</p>
+                            <time>10 March, 2015</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3>tags</h3>
+                    <ul class="ultags">
+                        <li>audio</li>
+                        <li>gallery</li>
+                        <li>image</li>
+                        <li>audio</li>
+                        <li>gallery</li>
+                        <li>image</li>
+                        <li>audio</li>
+                        <li>gallery</li>
+                        <li>image</li>
+                        <li>audio</li>
+                        <li>gallery</li>
+                        <li>image</li>
+                    </ul>
+                    <hr>
+                    <h3>NEWSLETTER</h3>
+                    <p>Subscribe to Our Newsletter to get Important News,  Amazing Offers.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter email">
+                        <span class="input-group-btn">
+                                 <button class="btn btn-default" type="button">Go</button>
+                            </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <h3>Flicke Feed</h3>
+                    <ul class="ulfeed">
+                        <li><img src="img/sl4.jpg" alt="photo"></li>
+                        <li><img src="img/sl4.jpg" alt="photo"></li>
+                        <li><img src="img/sl4.jpg" alt="photo"></li>
+                        <li><img src="img/sl4.jpg" alt="photo"></li>
+                        <li><img src="img/sl4.jpg" alt="photo"></li>
+                        <li><img src="img/sl4.jpg" alt="photo"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class=" container-fluid footer2">
+            Copyright 2015 <span>theHam </span>| All Rights Reserved
+        </div>
+    </footer>
 
 
 
     <script src="libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="libs/owlcarousel/owl.carousel.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.js"></script>-->
+    <script src="libs/mixitup/mixitup.min.js"></script>
+    <script src="libs/bxslider/jquery.bxslider.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARwSZqmVUX2q0CAhyOJLY5f27ig_6tL5Q&callback=myMap"></script>
 
     <script src="js/main.js"></script>
 </body>
