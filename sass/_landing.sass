@@ -15,7 +15,7 @@ body
     .container
       padding: 0
     .navb
-      background-color: #5a5954
+      background-color: #49473f
       margin: 0
       border: none
 
@@ -24,10 +24,13 @@ body
       background-image: none
       .navbar-nav>.active>a
         background-image: none
-        background-color: #5a5954
+        background-color: #49473f
         color: $primaryColor
       .navbar-nav>.active>a:hover
-        background-color: #5a5954
+        background-color: #49473f
+        color: $primaryColor
+      .navbar-nav>.active>a:focus
+        background-color: #49473f
         color: $primaryColor
       .navleft
         padding: 9px 10px
@@ -40,12 +43,14 @@ body
           transition: 1s
           .icon-bar
             background-color: white
-
-
+        button:focus
+          background-color: $primaryColor
+          .icon-bar
+            background-color: white
       .ulhead
         .active
           border-bottom: 2px solid $primaryColor
-          background-color: #5a5954
+          background-color: #49473f
           color: $primaryColor
 
         li
