@@ -1,7 +1,11 @@
 @import "variables"
 
-@media only screen and (max-width: 992px)
+@media only screen and (min-width: 1200px)
+  body main .eleven div.bx-controls-direction a
+    margin-left: 330px
+    margin-right: 330px
 
+@media only screen and (max-width: 992px)
   .navbar-default .navleft
     padding: 13px 7px
     img
@@ -12,7 +16,8 @@
     li a
       padding: 28px 5px
       font-size: 12px
-
+  body header .navbar-default .ulhead .active:after
+    bottom: -2px
   body main .mainphoto .maintext
     h2
       font-size: 25px
@@ -41,6 +46,12 @@
   body main .six .container .tab-contents p
     font-size: 12px
     line-height: 20px
+  body main .ten .container .ulsecond
+    border-right: 1px solid silver
+
+  body main .eleven div.bx-controls-direction a
+    margin-left: 120px
+    margin-right: 120px
 
 @media only screen and (max-width: 768px)
   ul.nav.navbar-nav.pull-right.ulhead
@@ -55,6 +66,8 @@
     padding: 0 15px
   body header .navbar-default .navbar-nav>.active
     border: none
+  body header .navbar-default .ulhead .active:after
+    background-color: #49473f
   body main .third .container
     padding: 0 15px
   body main .four .imgbg
@@ -80,6 +93,8 @@
   body main .seven .center
     h2
       font-size: 30px
+  body main .eleven div.bx-controls-direction a
+    display: none
   body main .thirteen .bg .imgbg
     display: none
 
@@ -102,6 +117,7 @@
     text-align: center
   .media
     text-align: left
+
 @media only screen and (max-width: 650px)
   body main .four .tabs ul.tabs li
     display: block
@@ -120,10 +136,12 @@
   body main .six .container ul.tabes li
     display: block
     width: 100%
+    border-right: 1px solid silver
   body main .six .container ul.tabes li.currents .triangle
     display: none
   body main .six .container ul.tabes
     margin-bottom: 15px
+
 @media only screen and (max-width: 480px)
   body main .five .container .container-mix .mix
     width: 100%
@@ -138,7 +156,5 @@
     font-size: 14px
   body main .eight .container .col-xs-6
     width: 100%
-  body main .eleven div.bx-controls-direction a
-    display: none
   body main .twelve .container .col-xs-6
     width: 100%

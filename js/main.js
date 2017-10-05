@@ -72,4 +72,73 @@ $(function() {
     $('.bxslider').bxSlider({
         pagerCustom: '#bx-pager'
     });
+
+
+    function setAnimation(elem, animationType) {
+        $(elem).css('opacity', '0').addClass('animated');
+        $(elem).waypoint({
+            handler: function(dir) {
+                if (dir === 'down') {
+                    $(this.element).removeClass('fadeOut').addClass(animationType).css('opacity', '1');
+                } else {
+                    $(this.element).removeClass(animationType).addClass('fadeOut').css('opacity', '1');
+                }
+            },
+            offset: '100%'
+        });
+    }
+
+
+    function initAnimations() {
+        setAnimation('.headername', 'zoomIn');
+        setAnimation('.ico', 'bounceIn');
+        setAnimation('.feature-item', 'zoomInUp');
+        setAnimation('.imgbg', 'slideInLeft');
+        setAnimation('.center h2', 'slideInUp');
+        setAnimation('.center h2 + p', 'slideInUp');
+        setAnimation('.icon', 'rubberBand');
+        setAnimation('.news', 'zoomIn');
+        setAnimation('.cols', 'zoomIn');
+        setAnimation('.ourteam', 'pulse');
+        setAnimation('.mapp', 'fadeIn');
+    }
+
+    initAnimations();
+
+    $(window).on('resize', function() {
+        initAnimations();
+    });
+
+
+// http://inorganik.github.io/countUp.js/
+    function setAnimatedCounter(elem) {
+        var counterObj = new CountUp(elem, 0, $('#'+elem).text(), 0, 2);
+        if (counterObj.error) return console.error(counterObj.error);
+
+        $('#'+elem).waypoint({
+            handler: function(dir) {
+                if (dir === 'down') {
+                    counterObj.start();
+                } else {
+                    counterObj.reset();
+                }
+            },
+            offset: '100%'
+        });
+    }
+
+    setAnimatedCounter('work-counter');
+    setAnimatedCounter('customer-counter');
+    setAnimatedCounter('purchase-counter');
+    setAnimatedCounter('office-counter');
+
 });
+
+
+
+$(window).on('load', function() {
+    $('.cssload-squeeze span').fadeOut(1600);
+    $('.cssload-squeeze').delay(400).fadeOut(3000);
+});
+
+
